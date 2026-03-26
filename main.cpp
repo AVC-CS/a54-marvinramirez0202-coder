@@ -14,14 +14,24 @@ int main()
 	{
 		cout << "Enter your range [from, to] \n";
 		cin >> begin >> end;
-	} while (begin >= end || begin < 2 || end < 0);
-
+	} while (begin >= end || begin < 2 || end < 0);{
+		for(int num = begin; num <= end; num++){
+			int i;
+			for(i = 2; i < num; i++){
+				if (num % i == 0){
+					break;
+				}
+			}
+			if(i == num){
+				cout << num << " ";
+			}
+		}
+	}
+	cout << endl;
 	// TODO: iterate through each number in the range [begin..end]
 	// TODO: check if n is prime by testing divisibility from 2 up to n-1
 	// TODO: if n is divisible by i, it is not prime
 	// TODO: if n is prime, print it
-
-	cout << endl;
 
 	return 0;
 }
